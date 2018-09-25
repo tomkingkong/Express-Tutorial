@@ -1,5 +1,9 @@
 const express = require('express');
 const app = express();
+app.get('/sunsets', (request, response) => {
+  response.status(200).json(sunsets);
+});
+
 app.get('/json', (request, response) => {
   response.status(200).json(mockData);
 });
