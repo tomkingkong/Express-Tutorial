@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+const sunsets = require('./sunsets');
+const errorSunset = require('./errorSunset');
+const mockData = require('./mockData');
 
 const urlLogger = (request, response, next) => {
   console.log('Request URL:', request.url);
