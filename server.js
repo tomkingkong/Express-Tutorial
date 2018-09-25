@@ -10,6 +10,11 @@ const timeLogger = (request, response, next) => {
   console.log('Datetime:', new Date(Date.now()).toString());
   next();
 }
+
+// app.use(function (req, res, next) {
+//   res.status(404).json(errorSunset);
+// });
+
 app.use(urlLogger, timeLogger);
 app.use(express.static('public'));
 app.get('/sunsets', (request, response) => {
