@@ -1,0 +1,9 @@
+h1 {
+  color: blue;
+}
+
+.sunset {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
