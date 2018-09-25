@@ -1,5 +1,11 @@
 const express = require('express');
 const app = express();
+
+const urlLogger = (request, response, next) => {
+  console.log('Request URL:', request.url);
+  next();
+}
+
 const timeLogger = (request, response, next) => {
   console.log('Datetime:', new Date(Date.now()).toString());
   next();
